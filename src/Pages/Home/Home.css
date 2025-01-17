@@ -4,5 +4,230 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.overlay{
+    position: absolute;
+    height: 100vh;
     width: 100vw;
+    background-color: rgba(0, 0, 0, 0.466);
+    z-index: -1;
+}
+.main-heading{
+    position: relative;
+    font-size: 4rem;
+    font-weight:bolder;
+    text-shadow: 2px 2px #00000041;
+    background: -webkit-linear-gradient(right, #00ff5e,#eab308 , #16a34a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: heading-animation 3s ease-in-out; 
+}
+.main-heading::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background:#eab308;
+    animation: heading-line 5s ease forwards alternate;
+}
+
+@keyframes heading-line {
+    0%{
+        width: 0;
+    }
+    40%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+    
+}
+
+
+@keyframes heading-animation{
+    0%{
+        opacity: 0;
+        top: 10rem;
+    }
+    100%{
+        opacity: 1;
+        top: 0;
+    }
+}
+
+.sub-heading{
+    font-size: 2rem;
+    font-weight:bolder;
+    padding: 1.5rem 0;
+    text-shadow: 0px 0px 8px rgb(158, 123, 35);
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    opacity: 1;
+    animation: sub-heading-animation 3s ease-in-out;
+}
+
+@keyframes sub-heading-animation{
+    0%{
+        opacity: 0;
+    }  
+    80%{
+        opacity: 0;
+    }  
+    100%{
+        opacity: 1;
+    }
+}
+.enroll-btn{
+    background:linear-gradient(to right, #16a34a , #eab308);
+    padding: 0.9rem 1.5rem;
+    border-radius: 9999px;
+    border: none;
+    color: #fff !important;
+    transition: all 2s ease-out;
+    cursor: pointer;
+    margin-top: 10px;
+    animation: enroll-btn-animation 3s ease-in-out;
+}
+.enroll-link{
+    text-decoration: none;
+    color: #fff !important;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+@keyframes enroll-btn-animation{
+    0%{
+        opacity: 0;
+    }  
+    80%{
+        opacity: 0;
+    }  
+    100%{
+        opacity: 1;
+    }
+}
+
+.molvi-container{
+    width: 100%;
+    object-fit: contain;
+}
+.molvi{
+    position: absolute;
+    width: 20rem;
+    right:  40px;
+    bottom: 0;
+    animation: molvi-animation 3s ease-in-out;
+}
+.molvi-name{
+    position: absolute;
+    right:  10px;
+    bottom: 10px;
+    color: #ffff;
+    font-size: 2rem;
+    text-shadow: 3px 2px #000000;
+    animation: molvi-animation 3s ease-in-out; 
+}
+.items{
+    position: absolute;
+    top: 9rem;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation: items-animation 3s ease-in-out forwards alternate;
+}
+
+.item:hover{
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.mosque{
+ animation: mosque-animation 3s ease-in-out infinite alternate;
+ animation-delay: 1s;
+}
+.rug{
+ animation: mosque-animation 3s ease-in-out infinite alternate;
+ animation-delay: 2s;
+}
+.muslim{
+ animation: mosque-animation 3s ease-in-out infinite alternate;
+ animation-delay: 3s;
+}
+.sujood{
+ animation: mosque-animation 3s ease-in-out infinite alternate;
+ animation-delay: 4s;
+}
+.quran{
+ animation: mosque-animation 3s ease-in-out infinite alternate;
+ animation-delay: 5s;
+}
+
+@keyframes mosque-animation{
+    0%{
+        transform: translateY(50%);
+    }  
+    100%{
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes items-animation{
+    0%{
+        width: 0%;
+    }  
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes molvi-animation{
+    0%{
+        opacity: 0;
+    }  
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-container{
+        height: 85vh;
+    }
+    .main-heading{
+        font-size: 3rem;
+    }
+    .sub-heading{
+        font-size: 1rem;
+    }
+    .enroll-link{
+        font-size: 1rem;
+    }
+    .molvi{
+        width: 12rem;
+        right:  20px;
+        bottom: -25px;
+    }
+    .molvi-name{
+        font-size: 1rem;
+        right:  20px;
+    }
 }
