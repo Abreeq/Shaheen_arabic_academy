@@ -1,0 +1,39 @@
+.instagram-reels-container {
+  max-width: 1200px;
+  height: 100vh;
+  margin: 40px auto 0px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #2e3a59;
+}
+
+.reels-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 5px;
+  justify-items: center;
+}
+
+.reel-item iframe {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reel-item iframe:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .reels-gallery {
+    grid-template-columns: 1fr;
+  }
+}

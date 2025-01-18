@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom'
 import molvi from '../../assets/images/molvi.png'
 import { AlAqsaMosqueIcon, PrayerRug01Icon, MuslimIcon, SujoodIcon ,Quran01Icon} from 'hugeicons-react';
 import Cards from '../../Components/Cards/Cards';
+import QuranSection from '../../Components/QuranSection/QuranSection';
+import Events from '../../Components/Events/Events';
+import InstagramReels from '../../Components/InstagramReels/InstagramReels';
 const Home = () => {
   return (
     <>
@@ -29,6 +32,9 @@ const Home = () => {
     </div>
     </div>
     <Cards />
+    <QuranSection />
+    <Events />
+    <InstagramReels />
     </>
   )
 }
