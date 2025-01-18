@@ -33,6 +33,12 @@
 }
 
 @media (max-width: 768px) {
+    .instagram-reels-container{
+        height: 100%;
+    }
+    .title {
+    font-size: 1.5rem;
+  }
   .reels-gallery {
     grid-template-columns: 1fr;
   }
